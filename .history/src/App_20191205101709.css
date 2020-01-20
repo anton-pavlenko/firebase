@@ -1,0 +1,124 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+} */
+
+/* * :after, :before {
+    box-sizing: border-box;
+}*/
+
+
+
+
+
+
+
+/* .row{margin: 30px;  box-shadow: 1px 1px 2px 1px lightgray; width: 95%; padding: 30px; }
+ .col{color: black; font-size: 16px; font-weight: 600;}
+ .s4{color: black; font-size: 20px; font-weight: 600;  height: 50px; margin: 0 0; }
+
+
+ .s10{color: black; padding:0 30px; background-color: whitesmoke; transition: all .1s linear;}
+
+ .s10:hover{background-color: lightgray;}  */
+
+
+/* .select {
+  margin: 30px;
+    box-shadow: 1px 1px 2px 1px red;
+     width: 90%;
+} */
+
+ /* nav-tabs {
+  border-bottom: 1px solid #dee2e6;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+} */
+
+/* button{
+  position: relative;
+  top: 110px;
+  right: 200px;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 1px 1px gray;
+  color: white;
+  font-size: 18px;
+  font-family: sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #333;
+} */
+
+/* .contDate {
+  width: 100px;
+  display: flex;
+
+  align-items: flex-start;
+  flex-direction: column;
+} */
+
+/* .contDateSelect {
+  width: 660px;
+  display: flex;
+  
+}
+
+.input-field {
+  padding-left: 15px;
+} */
+
+
+/* .css-yk16xz-control{padding: 0;}
+
+button:visited{border: none; background-color: #fff; }
+
+#Origin{
+  border: 1px solid gray;
+} */
+
+
+.container_app{ justify-content: center; align-content: center; padding: 30px 0;}
+.react{ text-align: center; font-size: 36px; font-family: 'Courier New', Courier, monospace;}
+
+
+.table-responsive-sm{width: 90%; padding: 0 24px;}
+.table{margin:30px 0; border: 1px solid gray; border-radius: 7px;  }
+th{color: white; font-family: sans-serif; font-size: 18px; }
+
+thead{background-color:#2f496e ;}
+td{font-family: sans-serif; font-weight: 600; }
+
+.text-td{text-align: center; }
+.end_content_table{background-color:#cfcccc}
+.end_content_table:hover{background-color: lightgray;}
+
+
+
+.nav-item{padding: 0 10px; display: flex; }
+
+.custom-select{height: 20px;}
+
+.input-field{padding: 10px;}

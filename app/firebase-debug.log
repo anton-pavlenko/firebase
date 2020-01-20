@@ -1,0 +1,56 @@
+[debug] [2020-01-14T11:37:29.224Z] ----------------------------------------------------------------------
+[debug] [2020-01-14T11:37:29.227Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Web Projects\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-01-14T11:37:29.227Z] CLI Version:   7.11.0
+[debug] [2020-01-14T11:37:29.227Z] Platform:      win32
+[debug] [2020-01-14T11:37:29.227Z] Node Version:  v13.1.0
+[debug] [2020-01-14T11:37:29.228Z] Time:          Tue Jan 14 2020 15:37:29 GMT+0400 (Armenia Standard Time)
+[debug] [2020-01-14T11:37:29.228Z] ----------------------------------------------------------------------
+[debug] [2020-01-14T11:37:29.228Z] 
+[debug] [2020-01-14T11:37:29.238Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-14T11:37:29.239Z] > authorizing via signed-in user
+[debug] [2020-01-14T11:37:29.239Z] [iam] checking project flyclever-cd51a for permissions ["firebase.projects.get"]
+[debug] [2020-01-14T11:37:29.241Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/flyclever-cd51a:testIamPermissions  
+
+[debug] [2020-01-14T11:37:30.372Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-14T11:37:30.374Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/flyclever-cd51a  
+ 
+[debug] [2020-01-14T11:37:30.813Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Web Projects\Desktop\FirebaseApp\firebase'...
+[info] 
+[debug] [2020-01-14T11:37:30.819Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/flyclever-cd51a/webApps/-/config  
+ 
+[debug] [2020-01-14T11:37:31.507Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: app/build
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "13"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\Web Projects\Desktop\FirebaseApp\firebase\functions" for Cloud Functions...
+[debug] [2020-01-14T11:37:33.351Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-01-14T11:37:33.351Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-01-14T11:37:33.351Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-01-14T11:37:33.352Z] [worker-~diagnostic~-ac95e1db-222a-410e-b52f-43e659a1cec6]: Assigning socketPath: \\?\pipe\C:\Users\Web Projects\Desktop\FirebaseApp\firebase\functions\11120
+[debug] [2020-01-14T11:37:33.352Z] [worker-~diagnostic~-ac95e1db-222a-410e-b52f-43e659a1cec6]: BUSY
+[debug] [2020-01-14T11:37:33.792Z] [runtime-status] [11120] Functions runtime initialized. {"cwd":"C:\\Users\\Web Projects\\Desktop\\FirebaseApp\\firebase\\functions","node_version":"13.1.0"}
+[debug] [2020-01-14T11:37:33.793Z] [runtime-status] [11120] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-01-14T11:37:33.796Z] [runtime-status] [11120] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"C:\\Users\\Web Projects\\Desktop\\FirebaseApp\\firebase\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-01-14T11:37:33.798Z] [runtime-status] [11120] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Web Projects\\Desktop\\FirebaseApp\\firebase\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-01-14T11:37:33.800Z] [runtime-status] [11120] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Web Projects\\Desktop\\FirebaseApp\\firebase\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  C:\Users\Web Projects\Desktop\FirebaseApp\firebase\functions\index.js:1
+import {functions} from 'firebase-functions'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (internal/modules/cjs/loader.js:983:16)
+    at Module._compile (internal/modules/cjs/loader.js:1033:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1103:10)
+    at Module.load (internal/modules/cjs/loader.js:914:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:822:14)
+    at Module.require (internal/modules/cjs/loader.js:956:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\Web Projects\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Web Projects\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:58)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2020-01-14T11:37:33.867Z] [worker-~diagnostic~-ac95e1db-222a-410e-b52f-43e659a1cec6]: exited
+[debug] [2020-01-14T11:37:33.867Z] [worker-~diagnostic~-ac95e1db-222a-410e-b52f-43e659a1cec6]: FINISHED

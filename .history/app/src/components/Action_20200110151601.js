@@ -1,0 +1,3 @@
+const signIn = () => {
+    firebase.singnInWithEmailAndPassword
+}

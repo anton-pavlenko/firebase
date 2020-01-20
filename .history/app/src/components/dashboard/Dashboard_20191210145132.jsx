@@ -1,0 +1,274 @@
+import React, { Component } from "react";
+import DatePicker from "react-datepicker";
+import NameForm from "./NameForm";
+import Select from "react-select";
+import "react-datepicker/dist/react-datepicker.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import IntlTelInput from 'react-intl-tel-input';
+import 'react-intl-tel-input/dist/main.css';
+
+
+// const techCompanies = [
+//     { label: "Apple", value: 1 },
+//     { label: "Facebook", value: 2 },
+//     { label: "Netflix", value: 3 },
+//     { label: "Tesla", value: 4 },
+//     { label: "Amazon", value: 5 },
+//     { label: "Alphabet", value: 6 },
+// ];
+
+// const App = () => (
+//     <div className="container">
+//       <div className="row">
+//         <div className="col-md-4"></div>
+//         <div className="col-md-4">
+//           <Select options={ techCompanies } />
+//         </div>
+//         <div className="col-md-4"></div>
+//       </div>
+//     </div>
+// );
+
+class Dashboard extends Component {
+  state = {
+    on: Boolean,
+    startDate: new Date()
+  };
+
+  handleChange = date => {
+    this.setState({ startDate: date });
+  };
+
+  toggle = () => {
+    this.setState({
+      on: !this.state.on
+    });
+  };
+
+  render() {
+    return (
+      <section>
+        <section className="row mt-3 mx-1">
+          <section className="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+            <div className="mb-3 card">
+              <div className="card-header">
+                <strong>Your Referrals</strong>
+              </div>
+              <div className="px-0 py-0 card-body">
+                <div className="table-responsive">
+                  <table className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto mb-0 table table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th>Client</th>
+                      <th>Booking Type</th>
+                      <th>Booking Status</th>
+                      <th>Client Billed</th>
+                      <th>Billing Status</th>
+                      <th>Commission</th>
+                      <th>Payout Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center">
+                      <td colspan="10">No Results</td>
+                    </tr>
+                  </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <ul className="nav nav-tabs">
+            <li class="nav-item">
+              <a class="active nav-link">Book Flight</a>
+            </li>
+            </ul>
+
+            <div className="card">
+              <div className="tab-content">
+                <div className="tab-pane active">
+                  <div className="card-body">
+                    <form className="text-left">
+                      <section class="row">
+                        <section class="col-12"></section>
+                        </section>
+                        <section className="row form-group">
+                          <section className="col-12">
+                            <div role="group" className="btn-group">
+                              <button type="button" class="btn btn-primary active">Round Trip</button>
+                              <button type="button" class="btn btn-primary">One Way</button>
+                            </div>
+                          </section>
+                        </section>
+                        <section className="row form-group mb-xl-3 mb-lg-3 mb-md-0 mb-sm-0 mb-0">
+                          <section className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-xl-0 mb-lg-0 mb-md-1 mb-sm-1 mb-1">
+                            <div className="rbt clearfix open col-12 px-0">
+                              <div className="rbt-input-hint-container">
+                                <input aria-autocomplete="both" aria-expanded="false" aria-haspopup="listbox" autocomplete="nope" placeholder="Origin" role="combobox" type="text" class="rbt-input-main form-control rbt-input " value=""></input>
+                              <div className="rbt-input-hint">
+                              <input className="input_area" aria-hidden="true" readonly="" tabindex="-1" value=""></input>
+                              <div className="input_style"></div>
+                              </div>
+                              </div>
+                              <div aria-atomic="true" aria-live="polite" class="sr-only rbt-sr-status" role="status">0 selections</div>
+                            </div>
+                          </section>
+
+                          <section className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-xl-0 mb-lg-0 mb-md-1 mb-sm-1 mb-1">
+                            <div className="rbt clearfix open col-12 px-0">
+                              <div className="rbt-input-hint-container">
+                                <input aria-autocomplete="both" aria-expanded="false" aria-haspopup="listbox" autocomplete="nope" placeholder="Destination" role="combobox" type="text" class="rbt-input-main form-control rbt-input " value=""></input>
+                              <div className="rbt-input-hint">
+                              <input className="input_area" aria-hidden="true" readonly="" tabindex="-1" value=""></input>
+                              <div className="input_style"></div>
+                              </div>
+                              </div>
+                              <div aria-atomic="true" aria-live="polite" class="sr-only rbt-sr-status" role="status">0 selections</div>
+                            </div>
+                          </section>
+
+                        </section>
+
+                        <section className="row form-group mb-xl-3 mb-lg-3 mb-md-0 mb-sm-0 mb-0">
+                          <section className="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-xl-0 mb-lg-0 mb-md-1 mb-sm-1 mb-1">
+                            <div id="Depart Date" tabIndex="-1" className="col-12 px-0 rw-datetime-picker rw-widget">
+                              <div className="rw-widget-picker rw-widget-container">
+                              <input id="Depart Date_input" role="combobox" placeholder="Depart Date" aria-haspopup="true" aria-expanded="false" aria-owns="" type="text" tabindex="0" autocomplete="off" class="rw-widget-input rw-input" value=""></input>
+                                <span className="rw-select rw-select-bordered">
+                                  <button tabindex="-1" title="Select date" type="button" aria-label="Select date" className="rw-btn rw-btn-select">
+                                  <span aria-hidden="true" class="rw-i rw-i-calendar">
+
+                                  </span>
+                                  </button>
+                                </span>
+                              </div>
+                              <div className="rw-calendar-transition-group">
+                                <table id ="Depart Date_date_calendar" aria-labelledby="Depart Date_date_calendar_label" direction="right" role="grid" tabindex="-1" aria-activedescendant="Depart Date_calendar_active_cell"
+                                class="rw-calendar-transition rw-calendar-transition-right rw-calendar-transition-entered rw-calendar-month rw-nav-view rw-calendar-grid">
+                                  <thead class="rw-calendar-head">
+                                    <tr class="rw-calendar-row">
+                                      <th class="rw-head-cell">Su</th>
+                                      <th class="rw-head-cell">Mo</th>
+                                      <th class="rw-head-cell">Tu</th>
+                                      <th class="rw-head-cell">We</th>
+                                      <th class="rw-head-cell">Th</th>
+                                      <th class="rw-head-cell">Fr</th>
+                                      <th class="rw-head-cell">Sa</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody class="rw-calendar-body">
+                                    <tr role="row" class="rw-calendar-row">
+                                      <td role="gridcell" title="December 1, 2019" aria-label="December 1, 2019" class="rw-cell rw-state-disabled rw-cell-not-allowed">01</td>
+                                      <td role="gridcell" title="December 2, 2019" aria-label="December 2, 2019" class="rw-cell rw-state-disabled rw-cell-not-allowed">02</td>
+                                      <td role="gridcell" title="December 3, 2019" aria-label="December 3, 2019" class="rw-cell rw-state-disabled rw-cell-not-allowed">03</td>
+                                      <td role="gridcell" title="December 4, 2019" aria-label="December 4, 2019" class="rw-cell rw-state-disabled rw-cell-not-allowed">04</td>
+                                      <td role="gridcell" title="December 5, 2019" aria-label="December 5, 2019" class="rw-cell rw-state-disabled rw-cell-not-allowed">05</td>
+                                      <td role="gridcell" title="December 6, 2019" aria-label="December 6, 2019" class="rw-cell rw-state-disabled rw-cell-not-allowed">06</td>
+                                      <td role="gridcell" title="December 7, 2019" aria-label="December 7, 2019" class="rw-cell rw-state-disabled rw-cell-not-allowed">07</td>
+                                      </tr>
+                                      <tr role="row" class="rw-calendar-row">
+                                        <td role="gridcell" title="December 8, 2019" aria-label="December 8, 2019" class="rw-cell rw-state-disabled rw-cell-not-allowed">08</td>
+                                        <td role="gridcell" title="December 9, 2019" aria-label="December 9, 2019" class="rw-cell rw-state-disabled rw-cell-not-allowed">09</td>
+                                        <td role="gridcell" id="Depart Date_calendar_active_cell" title="December 10, 2019" aria-label="December 10, 2019" class="rw-cell rw-now rw-state-focus">10</td>
+                                        <td role="gridcell" title="December 11, 2019" aria-label="December 11, 2019" class="rw-cell">11</td>
+                                        <td role="gridcell" title="December 12, 2019" aria-label="December 12, 2019" class="rw-cell">12</td>
+                                        <td role="gridcell" title="December 13, 2019" aria-label="December 13, 2019" class="rw-cell">13</td>
+                                        <td role="gridcell" title="December 14, 2019" aria-label="December 14, 2019" class="rw-cell">14</td>
+                                        </tr>
+                                        <tr role="row" class="rw-calendar-row"><td role="gridcell" title="December 15, 2019" aria-label="December 15, 2019" class="rw-cell">15</td>
+                                        <td role="gridcell" title="December 16, 2019" aria-label="December 16, 2019" class="rw-cell">16</td>
+                                        <td role="gridcell" title="December 17, 2019" aria-label="December 17, 2019" class="rw-cell">17</td>
+                                        <td role="gridcell" title="December 18, 2019" aria-label="December 18, 2019" class="rw-cell">18</td>
+                                        <td role="gridcell" title="December 19, 2019" aria-label="December 19, 2019" class="rw-cell">19</td>
+                                        <td role="gridcell" title="December 20, 2019" aria-label="December 20, 2019" class="rw-cell">20</td>
+                                        <td role="gridcell" title="December 21, 2019" aria-label="December 21, 2019" class="rw-cell">21</td>
+                                        </tr>
+                                        <tr role="row" class="rw-calendar-row"><td role="gridcell" title="December 22, 2019" aria-label="December 22, 2019" class="rw-cell">22</td>
+                                        <td role="gridcell" title="December 23, 2019" aria-label="December 23, 2019" class="rw-cell">23</td>
+                                        <td role="gridcell" title="December 24, 2019" aria-label="December 24, 2019" class="rw-cell">24</td>
+                                        <td role="gridcell" title="December 25, 2019" aria-label="December 25, 2019" class="rw-cell">25</td>
+                                        <td role="gridcell" title="December 26, 2019" aria-label="December 26, 2019" class="rw-cell">26</td>
+                                        <td role="gridcell" title="December 27, 2019" aria-label="December 27, 2019" class="rw-cell">27</td>
+                                        <td role="gridcell" title="December 28, 2019" aria-label="December 28, 2019" class="rw-cell">28</td>
+                                        </tr>
+                                        <tr role="row" class="rw-calendar-row">
+                                          <td role="gridcell" title="December 29, 2019" aria-label="December 29, 2019" class="rw-cell">29</td>
+                                          <td role="gridcell" title="December 30, 2019" aria-label="December 30, 2019" class="rw-cell">30</td>
+                                          <td role="gridcell" title="December 31, 2019" aria-label="December 31, 2019" class="rw-cell">31</td>
+                                          <td role="gridcell" title="January 1, 2020" aria-label="January 1, 2020" class="rw-cell rw-cell-off-range">01</td>
+                                          <td role="gridcell" title="January 2, 2020" aria-label="January 2, 2020" class="rw-cell rw-cell-off-range">02</td>
+                                          <td role="gridcell" title="January 3, 2020" aria-label="January 3, 2020" class="rw-cell rw-cell-off-range">03</td>
+                                          <td role="gridcell" title="January 4, 2020" aria-label="January 4, 2020" class="rw-cell rw-cell-off-range">04</td>
+                                          </tr>
+                                          </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </section>
+                        </section>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+        </section>
+      </section>
+    );
+  }
+}
+
+export default Dashboard;
+
+// <div>  {this.state.on, <form className="col s12">
+//             <div className="row">
+//                     <div className="input-field col s6">
+//                         <input class="validate" id="origin" placeholder="Origin" type="text"></input>
+
+//                     </div>
+//                     <div className="input-field col s6">
+//                         <input class="validate" id="origin" placeholder="Destination" type="text"></input>
+
+//                     </div>
+//                     <div className="contDateSelect">
+//                     <div className="contDate">
+//                     <div className="input-field   s2">
+//                         <DatePicker selected={this.state.startDate}
+//                             onSelect={this.handleSelect}
+//                             onChange={this.handleChange}
+//                             minDate={new Date()}
+//                             placeholderText="Depart Date" />
+//                     </div>
+//                     <div className="input-field   s2 " >
+//                         <DatePicker selected={this.state.startDate}
+//                             onSelect={this.handleSelect}
+//                             onChange={this.handleChange}
+//                             minDate={new Date()}
+//                             placeholderText="Return Date" />
+//                     </div>
+//                     </div>
+//                     <NameForm />
+//                     </div>
+//                 </div>
+
+//             </form>
+//         }
+
+//         {this.state.on && <form className="col s12">
+//             <div className="row">
+//                     <div className="input-field col s6">
+//                         <input class="validate" id="origin" placeholder="Origin" type="text"></input>
+//                         <input class="validate" id="origin" placeholder="Origin" type="text"></input>
+
+//                     </div>
+//                 </div>
+
+//             </form>
+//         }
+
+//         <button onClick={
+//             this.toggle
+//         }
+//             className="show_round">Round Trip/One Way</button>
+//     </div>
